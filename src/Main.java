@@ -1,16 +1,14 @@
 public class Main {
-    public Main() {
-    }
-    public static void main(String[] args) {
-        int initialDeposit = 100;
-        long refill = 666;
-        long bonus = refill / 100;
+        public static void main(String[] args) {
+        int balance = 100;
+        int refill = 1100;
+        int bonus = 0;
         if (refill > 1000) {
-            refill = bonus;
-        } else {
-            bonus = 0;
+            bonus = refill / 100;
         }
-        System.out.println(bonus);
+        balance = balance + refill + bonus;
+        System.out.println("Бонус от пополнения: " + bonus);
+        System.out.println("Итоговая сумма на счету: " + balance);
     }
 }
 
